@@ -5,6 +5,7 @@
 			<div class="post" id="post-<?php the_ID(); ?>">
 				<h2><?php the_title(); ?></h2>
 				<span class="date">by <?php the_author(); ?> on <?php the_time(__('m/j/Y','min')) ?></span>
+				<div><?php if ( has_post_thumbnail() ) { the_post_thumbnail(); }?></div>
 				<div class="entry">
 					<?php the_content(__('Read the rest of this post','min').' &raquo;'); ?>
 					<?php wp_link_pages(array('before' => '<p><strong>'.__('Pages','min').':</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>

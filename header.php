@@ -4,11 +4,12 @@
 <head profile="http://gmpg.org/xfn/11">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php if (is_home()) { ?><?php bloginfo('name'); ?> - <?php bloginfo('description'); ?><?php } elseif (is_single() || is_page() || is_archive()) { ?><?php wp_title(''); ?> - <?php bloginfo('name'); ?><?php } elseif  (is_404()) { ?><?php _e('The page you are looking for doesn\'t exist. Sorry.','min'); ?> - <?php bloginfo('name'); ?><?php } elseif (is_search()) { ?><?php _e('You searched for the following','min'); ?>: "<?php echo wp_specialchars($s); ?>" - <?php bloginfo('name'); ?><?php } ?></title>
-	
+
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	<meta name="description" content="<?php bloginfo('description') ?>" />
 	<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" />
-	
+
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 	<!--[if IE 7]>
 		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/ie7.css" type="text/css" media="screen" />
@@ -26,6 +27,11 @@
 <body>
 <div id="wrapper">
 	<div id="header">
+		<a href="<?php echo get_option('home'); ?>/">
+			<img class="main_logo" width="100%" src="<?php echo bloginfo('template_directory') ?>/img/developia_logo.png" />
+		</a>
+<!--
 		<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+-->
 		<p class="description"><?php bloginfo('description'); ?></p>
 	</div><!-- close:header -->

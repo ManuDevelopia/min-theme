@@ -2,6 +2,9 @@
 		<p><?php bloginfo('name'); ?> <?php _e('proudly powered by','min'); ?> <a href="http://www.wordpress.org" >Wordpress</a> <?php _e('and','min'); ?> <a href="http://jarederickson.com/2011/min-a-free-wordpress-minimal-theme/">min Theme</a></p>
 	</div><!-- close:footer -->
 </div><!-- close:wrapper -->
+<div id="footsignature">
+	<p><?php _e('powered by','min'); ?> <a href="http://www.wordpress.org" >Wordpress</a> <?php _e('and','min'); ?> Theme based on <a href="http://jarederickson.com/2011/min-a-free-wordpress-minimal-theme/">min Theme</a></p>
+</div>
 <?php wp_footer(); ?>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function feedlove($content) {
 $content = $content . '<p class="extra"><a href="http://lessmade.com/themes/min" title="min theme" >A minimal wordpress theme by Jared Erickson</a></p>';
@@ -6,6 +6,8 @@ return $content;
 }
 add_filter('the_excerpt_rss', 'feedlove');
 add_filter('the_content_rss', 'feedlove');
+
+add_theme_support( 'post-thumbnails' ); 
 
 /* ADD WIDGETS IN THE FOOTER */
 
@@ -25,5 +27,5 @@ add_filter('the_content_rss', 'feedlove');
 			'before_title' => '<h3>',
 			'after_title' => '</h3>',
 	));
-	
+
 ?>
